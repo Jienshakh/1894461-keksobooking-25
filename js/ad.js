@@ -1,4 +1,4 @@
-import {BOOKING_TYPES, CHECKIN_TIMES, FACILITIES, PHOTOS, prices} from './initial-data.js';
+import {BOOKING_TYPES, CHECKIN_TIMES, FACILITIES, PHOTOS, Prices} from './constants.js';
 import {getRandomInteger, getRandomFloat, getAuthorAvatar, getListElements} from './util.js';
 
 const getOffer = () => {
@@ -12,7 +12,7 @@ const getOffer = () => {
     {
       title: 'Бронируйте у нас, это выгодно',
       address: `${locationLat}, ${locationLng}`,
-      price: getRandomInteger (prices.minPrice, prices.maxPrice),
+      price: getRandomInteger (Prices.MIN_PRICE, Prices.MAX_PRICE),
       type: BOOKING_TYPES[getRandomInteger(0, 5)],
       rooms: getRandomInteger(1, 5),
       guests: getRandomInteger(1, 5),

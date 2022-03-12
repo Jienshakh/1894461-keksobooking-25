@@ -1,3 +1,3 @@
-import {getOffers} from './create-ad.js';
+import {getOffers} from './ad.js';
 
 getOffers(4);
